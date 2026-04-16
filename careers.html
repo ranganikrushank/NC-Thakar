@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - NC Thakar</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a5f',
+                        secondary: '#f59e0b',
+                        accent: '#fef3c7',
+                        cream: '#fff8dc',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #f59e0b;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .form-input {
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+        }
+        
+        .hero-pattern {
+            background-image: url("image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .upload-area {
+            border: 2px dashed #cbd5e1;
+            transition: all 0.3s ease;
+        }
+        
+        .upload-area:hover, .upload-area.dragover {
+            border-color: #f59e0b;
+            background-color: rgba(245, 158, 11, 0.05);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased bg-gray-50">
+
+    <!-- Top Navigation -->
+    <nav class="hidden lg:block bg-primary text-white py-2 text-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+
+                <!-- Left Side -->
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-secondary transition">
+                        <i class="fas fa-home mr-1"></i> Welcome
+                    </a>
+                </div>
+
+                <!-- Right Side -->
+                <div class="flex space-x-4">
+                    <a href="/achievements.html" class="hover:text-secondary transition">Achievement</a>
+                    <a href="/gallery.html" class="hover:text-secondary transition">Gallery</a>
+                    <a href="/alumni.html" class="hover:text-secondary transition">Alumni</a>
+                    <a href="/admission.html" class="hover:text-secondary transition">Admission</a>
+                    <a href="/online-fee-collection.html" class="hover:text-secondary transition">Online Fee
+                        Collection</a>
+                    <a href="/careers.html" class="hover:text-secondary transition">Career</a>
+                    <!-- <a href="#" class="hover:text-secondary transition">Parents Login</a> -->
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Navigation -->
+    <nav class="bg-accent shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-3">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="/assets/logo.png" alt="N.C. Thakar School" class="h-28 w-auto -ml-16">
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="/index.html"
+                        class="nav-link relative text-gray-800 hover:text-primary font-medium transition">Home</a>
+                    <a href="/about-us.html"
+                        class="nav-link relative text-gray-800 hover:text-primary font-medium transition">About Us</a>
+                    <a href="/facilities.html"
+                        class="nav-link relative text-gray-800 hover:text-primary font-medium transition">Facilities</a>
+                    <a href="/teachers.html"
+                        class="nav-link relative text-gray-800 hover:text-primary font-medium transition">Teachers
+                        Corners</a>
+                    <div class="relative group">
+                        <a href="/students.html"
+                            class="nav-link relative text-gray-800 hover:text-primary font-medium transition">
+                            Students Life
+                        </a>
+
+                        <div
+                            class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="/student-life/academic-life.html" class="block px-4 py-2 hover:bg-gray-100">Academic Life</a>
+                            <a href="/student-life/sports-game-life.html" class="block px-4 py-2 hover:bg-gray-100">Sports & Game Life</a>
+                            <a href="/student-life/achievements.html" class="block px-4 py-2 hover:bg-gray-100">Achievements</a>
+                            <a href="/student-life/club-zone.html" class="block px-4 py-2 hover:bg-gray-100">Club Zone</a>
+                            <a href="/student-life/parents-involvement.html" class="block px-4 py-2 hover:bg-gray-100">Parents Involvement</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="/gseb-info.html"
+                            class="nav-link relative text-gray-800 hover:text-primary font-medium transition">
+                            GSEB INFO
+                        </a>
+
+                        <div
+                            class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="/gseb-info/general-information.html" class="block px-4 py-2 hover:bg-gray-100">General Information</a>
+                            <a href="/gseb-info/school-infrastructure.html" class="block px-4 py-2 hover:bg-gray-100">School Infrastructure</a>
+                            <a href="/gseb-info/staff-teaching.html" class="block px-4 py-2 hover:bg-gray-100">Staff (Teaching)</a>
+                        </div>
+                    </div>
+                    <a href="/contact.html"
+                        class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition flex items-center">
+                        Contact us <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-primary text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-4 bg-primary text-white rounded-lg mt-2">
+
+                <!-- Contact Button -->
+                <div class="p-4 border-b border-white/20">
+                    <a href="/contact.html"
+                        class="bg-blue-600 text-white px-6 py-3 rounded-full flex justify-center items-center">
+                        Contact us <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Main Menu -->
+                <div class="flex flex-col">
+                    <a href="/index.html" class="px-4 py-3 border-b border-white/10">Home</a>
+                    <a href="/about-us.html" class="px-4 py-3 border-b border-white/10">About Us</a>
+                    <a href="/facilities.html" class="px-4 py-3 border-b border-white/10">Facilities</a>
+                    <a href="/teachers.html" class="px-4 py-3 border-b border-white/10">Teachers Corners</a>
+                    <div>
+                        <button onclick="toggleDropdown('studentDropdown')"
+                            class="w-full flex justify-between items-center px-4 py-3 border-b border-white/10">
+                            Students Life <span>+</span>
+                        </button>
+
+                        <div id="studentDropdown" class="hidden flex flex-col bg-white text-black">
+                            <a href="/student-life/academic-life.html" class="px-6 py-2 border-b">Academic Life</a>
+                            <a href="/student-life/sports-game-life.html" class="px-6 py-2 border-b">Sports & Game Life</a>
+                            <!-- <a href="/student-life/achievements.html" class="px-6 py-2 border-b">Achievements</a> -->
+                            <a href="/student-life/club-zone.html" class="px-6 py-2 border-b">Club Zone</a>
+                            <a href="/student-life/parents-involvement.html" class="px-6 py-2">Parents Involvement</a>
+                        </div>
+                    </div>
+                    <div>
+                        <button onclick="toggleDropdown('gsebDropdown')"
+                            class="w-full flex justify-between items-center px-4 py-3">
+                            GSEB INFO <span>+</span>
+                        </button>
+
+                        <div id="gsebDropdown" class="hidden flex flex-col bg-white text-black">
+                            <a href="/gseb-info/general-information.html" class="px-6 py-2 border-b">General Information</a>
+                            <a href="/gseb-info/school-infrastructure.html" class="px-6 py-2 border-b">School Infrastructure</a>
+                            <a href="/gseb-info/staff-teaching.html" class="px-6 py-2">Staff (Teaching)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Links (IMPORTANT PART YOU WANTED) -->
+                <div class="flex flex-wrap gap-3 p-4 text-sm border-b border-white/20">
+                    <a href="/achievements.html" class="whitespace-nowrap">Achievement</a>
+                    <!-- <a href="/downloads.html" class="whitespace-nowrap">Download</a> -->
+                    <a href="/gallery.html" class="whitespace-nowrap">Gallery</a>
+                    <a href="/alumni.html" class="whitespace-nowrap">Alumni</a>
+                    <a href="/admission.html" class="whitespace-nowrap">Admission</a>
+                    <a href="/online-fee-collection.html" class="whitespace-nowrap">Online Fee Collection</a>
+                    <a href="/careers.html" class="whitespace-nowrap">Career</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-primary py-20 relative overflow-hidden">
+        <div class="absolute inset-0 hero-pattern opacity-20"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-secondary rounded-full mb-4" data-aos="zoom-in">
+                <i class="fas fa-briefcase text-3xl text-primary"></i>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4" data-aos="fade-down">Join Our Team</h1>
+            <div class="flex justify-center items-center space-x-2 text-secondary" data-aos="fade-up" data-aos-delay="200">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <i class="fas fa-chevron-right text-sm"></i>
+                <span class="text-white">Career</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Application Form Section -->
+    <section class="py-16 bg-gradient-to-b from-cream to-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-4">
+                        <i class="fas fa-file-alt text-3xl text-secondary"></i>
+                    </div>
+                    <h2 class="text-4xl font-bold text-primary mb-4">Application Form</h2>
+                    <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                        Ready to shape young minds? Submit your details and resume below. Our HR team will review your application and get back to you shortly.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-2xl p-8 md:p-12 border border-gray-100" data-aos="fade-up">
+                    <form id="careerForm" class="space-y-8" onsubmit="handleSubmit(event)">
+                        
+                        <!-- Personal Information -->
+                        <div class="bg-gradient-to-r from-primary to-blue-800 text-white p-6 rounded-xl">
+                            <h3 class="text-xl font-bold flex items-center">
+                                <i class="fas fa-user mr-3 text-secondary"></i>
+                                Personal Information
+                            </h3>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="firstName" class="block text-sm font-semibold text-gray-700 mb-2">
+                                    <i class="fas fa-user text-secondary mr-2"></i>First Name *
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="firstName" 
+                                    name="firstName" 
+                                    required
+                                    class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
+                                    placeholder="Enter your first name"
+                                >
+                            </div>
+                            
+                            <div>
+                                <label for="lastName" class="block text-sm font-semibold text-gray-700 mb-2">
+                                    <i class="fas fa-user text-secondary mr-2"></i>Last Name *
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="lastName" 
+                                    name="lastName" 
+                                    required
+                                    class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
+                                    placeholder="Enter your last name"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+                                    <i class="fas fa-envelope text-secondary mr-2"></i>Email ID *
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required
+                                    class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
+                                    placeholder="your.email@example.com"
+                                >
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
+                                    <i class="fas fa-phone text-secondary mr-2"></i>Phone Number *
+                                </label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    required
+                                    pattern="[0-9]{10}"
+                                    class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
+                                    placeholder="Enter 10-digit phone number"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Role Selection -->
+                        <div>
+                            <label for="applyingRole" class="block text-sm font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-chalkboard-teacher text-secondary mr-2"></i>Applying Role *
+                            </label>
+                            <select 
+                                id="applyingRole" 
+                                name="applyingRole" 
+                                required
+                                class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
+                            >
+                                <option value="">Select Position</option>
+                                <option value="pre-primary">Pre-Primary Teacher</option>
+                                <option value="primary">Primary Teacher</option>
+                                <option value="senior-secondary">Senior Secondary Teacher</option>
+                                <option value="sports-teacher">Sports Teacher</option>
+                                <option value="activity-incharge">Activity In-Charge</option>
+                            </select>
+                        </div>
+
+                        <!-- Address Information -->
+                        <div class="bg-gradient-to-r from-secondary to-amber-600 text-white p-6 rounded-xl">
+                            <h3 class="text-xl font-bold flex items-center">
+                                <i class="fas fa-map-marker-alt mr-3 text-white"></i>
+                                Address Details
+                            </h3>
+                        </div>
+
+                        <div>
+                            <label for="address" class="block text-sm font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-home text-secondary mr-2"></i>Address *
+                            </label>
+                            <textarea 
+                                id="address" 
+                                name="address" 
+                                rows="3" 
+                                required
+                                class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50 resize-none"
+                                placeholder="Enter your full street address"
+                            ></textarea>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                            <div>
+                                <label for="city" class="block text-sm font-semibold text-gray-700 mb-2">
+                                    <i class="fas fa-city text-secondary mr-2"></i>City *
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="city" 
+                                    name="city" 
+                                    required
+                                    class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
+                                    placeholder="City"
+                                >
+                            </div>
+                            
+                            <div>
+                                <label for="state" class="block text-sm font-semibold text-gray-700 mb-2">
+                                    <i class="fas fa-map text-secondary mr-2"></i>State *
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="state" 
+                                    name="state" 
+                                    required
+                                    class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
+                                    placeholder="State"
+                                >
+                            </div>
+                            
+                            <div>
+                                <label for="zip" class="block text-sm font-semibold text-gray-700 mb-2">
+                                    <i class="fas fa-mail-bulk text-secondary mr-2"></i>Zip/Postal *
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="zip" 
+                                    name="zip" 
+                                    required
+                                    pattern="[0-9]{6}"
+                                    class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
+                                    placeholder="Postal Code"
+                                >
+                            </div>
+                            
+                            <div>
+                                <label for="country" class="block text-sm font-semibold text-gray-700 mb-2">
+                                    <i class="fas fa-globe text-secondary mr-2"></i>Country *
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="country" 
+                                    name="country" 
+                                    required
+                                    value="India"
+                                    class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
+                                    placeholder="Country"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Resume Upload -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-paperclip text-secondary mr-2"></i>Upload Resume/CV (PDF, DOC, DOCX) *
+                            </label>
+                            <div class="upload-area rounded-lg p-6 text-center cursor-pointer" id="dropZone">
+                                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required class="hidden">
+                                <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-2"></i>
+                                <p class="text-gray-600">Drag & drop your resume here or <span class="text-secondary font-semibold">browse</span></p>
+                                <p class="text-xs text-gray-500 mt-1">Max file size: 5MB</p>
+                                <p id="fileName" class="text-sm font-semibold text-primary mt-2 hidden"></p>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button 
+                                type="submit" 
+                                id="submitBtn"
+                                class="flex-1 bg-gradient-to-r from-primary to-blue-800 text-white font-bold py-4 px-8 rounded-lg hover:from-secondary hover:to-amber-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2"
+                            >
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Submit Application</span>
+                            </button>
+                            <button 
+                                type="reset" 
+                                class="flex-1 bg-gray-200 text-gray-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-300 transition-all duration-300 flex items-center justify-center gap-2"
+                            >
+                                <i class="fas fa-redo"></i>
+                                <span>Reset Form</span>
+                            </button>
+                        </div>
+
+                        <!-- Success Message (Hidden by default) -->
+                        <div id="successMessage" class="hidden mt-6 p-4 bg-green-100 border-l-4 border-green-500 text-green-700 rounded-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle mr-3 text-2xl"></i>
+                                <div>
+                                    <p class="font-bold">Application Submitted Successfully!</p>
+                                    <p class="text-sm">Our HR team will review your profile and contact you shortly.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <img src="/assets/logo.png" alt="Logo" class="h-28 mb-4 bg-white rounded p-2">
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        N.C. Thakar Education Campus School is committed to providing quality education and holistic
+                        development to students.
+                    </p>
+                    <!-- <div class="flex space-x-4 mt-4">
+                        <a href="#"
+                            class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div> -->
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-secondary">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/about-us.html" class="text-gray-300 hover:text-secondary transition">About Us</a></li>
+                        <li><a href="/admission.html" class="text-gray-300 hover:text-secondary transition">Admissions</a></li>
+                        <li><a href="/gallery.html" class="text-gray-300 hover:text-secondary transition">Gallery</a></li>
+                        <li><a href="/contact.html" class="text-gray-300 hover:text-secondary transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-secondary">Contact Info</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-secondary"></i>
+                            <span class="text-gray-300">Surat, Gujarat, India</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-secondary"></i>
+                            <span class="text-gray-300">+91 XXXXXXXXXX</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-secondary"></i>
+                            <span class="text-gray-300">info@ncthakar.edu</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3 text-secondary"></i>
+                            <span class="text-gray-300">Mon - Sat: 8:00 AM - 4:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex space-x-4 mt-4">
+                        <a href="#"
+                            class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center hover:bg-white hover:text-primary transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+                <p>
+                    &copy; 2026 N.C. Thakar Education Campus School. All Rights Reserved.
+                    <br class="hidden md:block">
+                    Built by
+                    <a href="https://atlanciaworldwide.com" target="_blank"
+                        class="text-amber-400 font-semibold hover:text-amber-300 transition duration-300">
+                        Atlancia Worldwide
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" onclick="scrollToTop()" class="fixed bottom-8 right-8 bg-secondary text-white w-12 h-12 rounded-full shadow-lg hidden hover:bg-primary transition z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS Animation Library
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // File Upload Handling
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('resume');
+        const fileNameDisplay = document.getElementById('fileName');
+        
+        dropZone.addEventListener('click', () => fileInput.click());
+        
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+        
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('dragover');
+        });
+        
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            if (e.dataTransfer.files.length) {
+                fileInput.files = e.dataTransfer.files;
+                updateFileName(e.dataTransfer.files[0].name);
+            }
+        });
+        
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length) {
+                updateFileName(fileInput.files[0].name);
+            }
+        });
+        
+        function updateFileName(name) {
+            fileNameDisplay.textContent = `📄 ${name}`;
+            fileNameDisplay.classList.remove('hidden');
+        }
+        
+        // Form Submission Handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const successMessage = document.getElementById('successMessage');
+            const form = document.getElementById('careerForm');
+            
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Submitting...</span>';
+            
+            // Get form data
+            const formData = new FormData(form);
+            
+            // Simulate form submission (replace with actual API call)
+            setTimeout(() => {
+                // Show success message
+                successMessage.classList.remove('hidden');
+                
+                // Reset form
+                form.reset();
+                fileNameDisplay.classList.add('hidden');
+                
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i><span>Submit Application</span>';
+                
+                // Hide success message after 8 seconds
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                }, 8000);
+                
+                // Scroll to success message
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                
+                console.log('Career application submitted');
+            }, 1500);
+        }
+        
+        // Form Validation Visual Feedback
+        const formInputs = document.querySelectorAll('.form-input');
+        formInputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.required && this.value.trim() === '') {
+                    this.classList.add('border-red-500');
+                    this.classList.remove('border-gray-200', 'border-secondary');
+                } else {
+                    this.classList.remove('border-red-500');
+                    this.classList.add('border-gray-200');
+                }
+            });
+            
+            input.addEventListener('focus', function() {
+                this.classList.remove('border-red-500');
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopBtn.classList.remove('hidden');
+            } else {
+                backToTopBtn.classList.add('hidden');
+            }
+        };
+        
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+    <script>
+        function toggleDropdown(id) {
+            const el = document.getElementById(id);
+            el.classList.toggle("hidden");
+        }
+    </script>
+</body>
+</html>
