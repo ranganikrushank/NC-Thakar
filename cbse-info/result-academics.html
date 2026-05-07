@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - NC Thakar</title>
+    <title>General Information - NC Thakar</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -58,42 +58,35 @@
             width: 100%;
         }
 
-        .form-input {
+        .table-row {
             transition: all 0.3s ease;
         }
 
-        .form-input:focus {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
-        }
-
-        .contact-card {
-            transition: all 0.3s ease;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        .table-row:hover {
+            background-color: rgba(245, 158, 11, 0.1);
+            transform: translateX(5px);
         }
 
         .hero-pattern {
             background-image: url("image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
 
-        .map-container {
-            filter: grayscale(20%);
-            transition: filter 0.3s ease;
-        }
+        @media print {
+            .no-print {
+                display: none !important;
+            }
 
-        .map-container:hover {
-            filter: grayscale(0%);
+            .table-container {
+                box-shadow: none !important;
+                border: 1px solid #ddd !important;
+            }
         }
     </style>
 </head>
 
 <body class="font-sans antialiased bg-gray-50">
 
-    <!-- Top Navigation -->
+    <!-- Top Navigation (Desktop Only) -->
     <nav class="hidden lg:block bg-primary text-white py-2 text-sm">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center">
@@ -142,7 +135,8 @@
                         class="nav-link relative text-gray-800 hover:text-primary font-medium transition">Teachers
                         Corners</a>
                     <div class="relative group">
-                        <a href="/#" class="nav-link relative text-gray-800 hover:text-primary font-medium transition">
+                        <a href="/#"
+                            class="nav-link relative text-gray-800 hover:text-primary font-medium transition">
                             Students Life
                         </a>
 
@@ -150,16 +144,17 @@
                             class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <a href="/student-life.html#academic-life"
                                 class="block px-4 py-2 hover:bg-gray-100">Academic Life</a>
-                            <a href="/student-life.html#sports" class="block px-4 py-2 hover:bg-gray-100">Sports & Game
-                                Life</a>
-                            <a href="/student-life.html#club-zone" class="block px-4 py-2 hover:bg-gray-100">Club
-                                Zone</a>
+                            <a href="/student-life.html#sports"
+                                class="block px-4 py-2 hover:bg-gray-100">Sports & Game Life</a>
+                            <a href="/student-life.html#club-zone"
+                                class="block px-4 py-2 hover:bg-gray-100">Club Zone</a>
                             <a href="/student-life.html#parents-involvement"
                                 class="block px-4 py-2 hover:bg-gray-100">Parents Involvement</a>
                         </div>
                     </div>
                     <div class="relative group">
-                        <a href="#" class="nav-link relative text-gray-800 hover:text-primary font-medium transition">
+                        <a href="#"
+                            class="nav-link relative text-gray-800 hover:text-primary font-medium transition">
                             CBSE INFO
                         </a>
 
@@ -171,14 +166,13 @@
                                 class="block px-4 py-2 hover:bg-gray-100">School Infrastructure</a>
                             <a href="/cbse-info/staff-teaching.html" class="block px-4 py-2 hover:bg-gray-100">Staff
                                 (Teaching)</a>
-                            <a href="/cbse-info/result-academics.html" class="block px-4 py-2 hover:bg-gray-100">Result
-                                & Academics</a>
-                            <a href="/cbse-info/documentation-information.html"
-                                class="block px-4 py-2 hover:bg-gray-100">Documentation & Information</a>
+                            <a href="/cbse-info/result-academics.html" class="block px-4 py-2 hover:bg-gray-100">Result & Academics</a>
+                            <a href="/cbse-info/documentation-information.html" class="block px-4 py-2 hover:bg-gray-100">Documentation & Information</a>
                         </div>
                     </div>
                     <div class="relative group">
-                        <a href="#" class="nav-link relative text-gray-800 hover:text-primary font-medium transition">
+                        <a href="#"
+                            class="nav-link relative text-gray-800 hover:text-primary font-medium transition">
                             Mandatory Disclosure
                         </a>
                         <div
@@ -246,8 +240,7 @@
                                 Infrastructure</a>
                             <a href="/cbse-info/staff-teaching.html" class="px-6 py-2">Staff (Teaching)</a>
                             <a href="/cbse-info/result-academics.html" class="px-6 py-2">Result & Academics</a>
-                            <a href="/cbse-info/documentation-information.html" class="px-6 py-2">Documentation &
-                                Information</a>
+                            <a href="/cbse-info/documentation-information.html" class="px-6 py-2">Documentation & Information</a>
                         </div>
                     </div>
                     <div>
@@ -257,8 +250,7 @@
                         </button>
 
                         <div id="gsebDropdown" class="hidden flex flex-col bg-white text-black">
-                            <a href="/assets/pdf/mandatory-disclosure-1.pdf" class="px-6 py-2 border-b">Mandatory
-                                Disclosure 1</a>
+                            <a href="/assets/pdf/mandatory-disclosure-1.pdf" class="px-6 py-2 border-b">Mandatory Disclosure 1</a>
                             <!-- <a href="/assets/pdf/mandatory-disclosure-2.pdf" class="px-6 py-2 border-b">Mandatory Disclosure 2</a> -->
                         </div>
                     </div>
@@ -279,210 +271,118 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="bg-primary py-20 relative overflow-hidden">
-        <div class="absolute inset-0 hero-pattern opacity-20"></div>
-        <div class="container mx-auto px-4 text-center relative z-10">
-            <div class="inline-flex items-center justify-center w-16 h-16 bg-secondary rounded-full mb-4"
-                data-aos="zoom-in">
-                <i class="fas fa-envelope text-3xl text-primary"></i>
-            </div>
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4" data-aos="fade-down">Contact Us</h1>
-            <div class="flex justify-center items-center space-x-2 text-secondary" data-aos="fade-up"
-                data-aos-delay="200">
-                <a href="index.html" class="hover:text-white transition">Home</a>
-                <i class="fas fa-chevron-right text-sm"></i>
-                <span class="text-white">Contact Us</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="py-16 bg-gradient-to-b from-cream to-white">
+    <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
-            <div class="grid lg:grid-cols-2 gap-12">
 
-                <!-- Contact Form -->
-                <div data-aos="fade-right">
-                    <div class="bg-white rounded-2xl shadow-2xl p-8 md:p-10">
-                        <div class="mb-8">
-                            <h2 class="text-3xl font-bold text-primary mb-2">Get In Touch</h2>
-                            <p class="text-gray-600">Have questions? We'd love to hear from you. Send us a message and
-                                we'll respond as soon as possible.</p>
-                        </div>
-
-                        <form id="contactForm" class="space-y-6" onsubmit="handleSubmit(event)">
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div>
-                                    <label for="firstName" class="block text-sm font-semibold text-gray-700 mb-2">
-                                        <i class="fas fa-user text-secondary mr-2"></i>First Name *
-                                    </label>
-                                    <input type="text" id="firstName" name="firstName" required
-                                        class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
-                                        placeholder="Enter your first name">
-                                </div>
-
-                                <div>
-                                    <label for="lastName" class="block text-sm font-semibold text-gray-700 mb-2">
-                                        <i class="fas fa-user text-secondary mr-2"></i>Last Name *
-                                    </label>
-                                    <input type="text" id="lastName" name="lastName" required
-                                        class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
-                                        placeholder="Enter your last name">
-                                </div>
-                            </div>
-
-                            <div>
-                                <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
-                                    <i class="fas fa-envelope text-secondary mr-2"></i>Email Address *
-                                </label>
-                                <input type="email" id="email" name="email" required
-                                    class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
-                                    placeholder="your.email@example.com">
-                            </div>
-
-                            <div>
-                                <label for="subject" class="block text-sm font-semibold text-gray-700 mb-2">
-                                    <i class="fas fa-tag text-secondary mr-2"></i>Subject *
-                                </label>
-                                <select id="subject" name="subject" required
-                                    class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50">
-                                    <option value="">Select a subject</option>
-                                    <option value="admission">Admission Inquiry</option>
-                                    <option value="fees">Fee Payment</option>
-                                    <option value="academic">Academic Query</option>
-                                    <option value="facility">Facility Information</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
-                                    <i class="fas fa-comment-dots text-secondary mr-2"></i>Message *
-                                </label>
-                                <textarea id="message" name="message" rows="5" required
-                                    class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50 resize-none"
-                                    placeholder="Write your message here..."></textarea>
-                            </div>
-
-                            <button type="submit" id="submitBtn"
-                                class="w-full bg-gradient-to-r from-primary to-blue-800 text-white font-bold py-4 px-8 rounded-lg hover:from-secondary hover:to-amber-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2">
-                                <i class="fas fa-paper-plane"></i>
-                                <span>Send Message</span>
-                            </button>
-                        </form>
-
-                        <!-- Success Message (Hidden by default) -->
-                        <div id="successMessage"
-                            class="hidden mt-6 p-4 bg-green-100 border-l-4 border-green-500 text-green-700 rounded-lg">
-                            <div class="flex items-center">
-                                <i class="fas fa-check-circle mr-3 text-2xl"></i>
-                                <div>
-                                    <p class="font-bold">Message Sent Successfully!</p>
-                                    <p class="text-sm">We'll get back to you soon.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact Information & Map -->
-                <div class="space-y-8" data-aos="fade-left">
-                    <!-- Contact Cards -->
-                    <div class="grid sm:grid-cols-2 gap-6">
-                        <div class="contact-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary">
-                            <div class="flex items-center mb-4">
-                                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
-                                    <i class="fas fa-map-marker-alt text-secondary text-xl"></i>
-                                </div>
-                                <h3 class="font-bold text-primary text-lg">Address</h3>
-                            </div>
-                            <p class="text-gray-600 text-sm leading-relaxed">
-                                NC Thakar Education Campus, near CH Park, Sarthana Jakat Naka, Sagwadi, Nana Varachha, Kathodara, Surat, Gujarat 395013
-                            </p>
-                        </div>
-
-                        <div class="contact-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-secondary">
-                            <div class="flex items-center mb-4">
-                                <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4">
-                                    <i class="fas fa-phone text-primary text-xl"></i>
-                                </div>
-                                <h3 class="font-bold text-primary text-lg">Phone</h3>
-                            </div>
-                            <p class="text-gray-600 text-sm">
-                                <a href="tel:+91903321 10234" class="hover:text-secondary transition">+91
-                                    903321 10234</a><br>
-                                <!-- <a href="tel:+919712942260" class="hover:text-secondary transition">+91 9712942260</a> -->
-                            </p>
-                        </div>
-
-                        <div class="contact-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary">
-                            <div class="flex items-center mb-4">
-                                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
-                                    <i class="fas fa-envelope text-secondary text-xl"></i>
-                                </div>
-                                <h3 class="font-bold text-primary text-lg">Email</h3>
-                            </div>
-                            <p class="text-gray-600 text-sm">
-                                <a href="mailto:10223@cbseshiksha.in"
-                                    class="hover:text-secondary transition">10223@cbseshiksha.in</a>
-                            </p>
-                        </div>
-
-                        <div class="contact-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-secondary">
-                            <div class="flex items-center mb-4">
-                                <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4">
-                                    <i class="fas fa-clock text-primary text-xl"></i>
-                                </div>
-                                <h3 class="font-bold text-primary text-lg">Office Hours</h3>
-                            </div>
-                            <p class="text-gray-600 text-sm">
-                                Mon - Sat: 8:00 AM - 4:00 PM<br>
-                                Sunday: Closed
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Map -->
-                    <div class="bg-white rounded-2xl shadow-2xl overflow-hidden" data-aos="fade-up">
-                        <div class="p-4 bg-primary text-white">
-                            <h3 class="font-bold text-lg flex items-center">
-                                <i class="fas fa-map-marked-alt mr-2 text-secondary"></i>
-                                Find Us On Map
-                            </h3>
-                        </div>
-                        <div class="map-container h-80 w-full">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.9253022093317!2d72.91106397450206!3d21.234810480671097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be045edafddf421%3A0xd447cbef32bf7d84!2sN%20C%20Thakar%20Education%20Campus!5e0!3m2!1sen!2sin!4v1777659713946!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-
-                    <!-- Quick Contact Info -->
-                    <div class="bg-gradient-to-r from-primary to-blue-800 text-white p-6 rounded-xl shadow-lg">
-                        <h3 class="font-bold text-xl mb-4 flex items-center">
-                            <i class="fas fa-info-circle mr-2 text-secondary"></i>
-                            Quick Information
-                        </h3>
-                        <ul class="space-y-3 text-sm">
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-secondary mr-3 mt-1"></i>
-                                <span>Admission open for academic year 2026-27</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-secondary mr-3 mt-1"></i>
-                                <span>Online fee payment available 24/7</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-secondary mr-3 mt-1"></i>
-                                <span>Parent-teacher meetings every month</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-secondary mr-3 mt-1"></i>
-                                <span>Transport facility available</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <!-- Heading -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-primary">Result & Academics</h2>
+                <p class="text-gray-600 mt-2">Important academic information and documents</p>
             </div>
+
+            <!-- Table -->
+            <div class="overflow-x-auto bg-white rounded-xl shadow-md">
+                <table class="w-full text-left border-collapse">
+
+                    <!-- Header -->
+                    <thead class="bg-primary text-white">
+                        <tr>
+                            <th class="p-4 text-sm font-semibold">Sr. No</th>
+                            <th class="p-4 text-sm font-semibold">Information</th>
+                            <th class="p-4 text-sm font-semibold text-center">Details</th>
+                        </tr>
+                    </thead>
+
+                    <!-- Body -->
+                    <tbody class="text-gray-700">
+
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-4">1</td>
+                            <td class="p-4">Fee Structure of School</td>
+                            <td class="p-4 text-center">
+                                <a href="/assets/pdf/Fee Structure.pdf" target="_blank"
+                                    class="text-secondary font-semibold hover:underline">Click Here</a>
+                            </td>
+                        </tr>
+
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-4">2</td>
+                            <td class="p-4">Annual Academic Calendar</td>
+                            <td class="p-4 text-center">
+                                <a href="/assets/pdf/academic-calendar.pdf" target="_blank"
+                                    class="text-secondary font-semibold hover:underline">Click Here</a>
+                            </td>
+                        </tr>
+
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-4">3</td>
+                            <td class="p-4">List of Parents Teachers Association (PTA) Members</td>
+                            <td class="p-4 text-center">
+                                <a href="/pdf/pta-members.pdf" target="_blank"
+                                    class="text-secondary font-semibold hover:underline">Click Here</a>
+                            </td>
+                        </tr>
+
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-4">4</td>
+                            <td class="p-4">Last Three-Year Board Examination Results</td>
+                            <td class="p-4 text-center">
+                                <a href="/assets/pdf/result.jpg" target="_blank"
+                                    class="text-secondary font-semibold hover:underline">Click Here</a>
+                            </td>
+                        </tr>
+
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-4">5</td>
+                            <td class="p-4">School Management Committee (SMC) - Shift 1</td>
+                            <td class="p-4 text-center">
+                                <a href="/pdf/smc-shift1.pdf" target="_blank"
+                                    class="text-secondary font-semibold hover:underline">Click Here</a>
+                            </td>
+                        </tr>
+
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-4">6</td>
+                            <td class="p-4">School Management Committee (SMC) - Shift 2</td>
+                            <td class="p-4 text-center">
+                                <a href="/pdf/smc-shift2.pdf" target="_blank"
+                                    class="text-secondary font-semibold hover:underline">Click Here</a>
+                            </td>
+                        </tr>
+
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-4">7</td>
+                            <td class="p-4">Annual Report 2026–27</td>
+                            <td class="p-4 text-center">
+                                <a href="/assets/pdf/Annual Report.pdf" target="_blank"
+                                    class="text-secondary font-semibold hover:underline">Click Here</a>
+                            </td>
+                        </tr>
+
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="p-4">8</td>
+                            <td class="p-4">Book List 2025–26</td>
+                            <td class="p-4 text-center">
+                                <a href="/assets/pdf/Book List.pdf" target="_blank"
+                                    class="text-secondary font-semibold hover:underline">Click Here</a>
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-4">9</td>
+                            <td class="p-4">Curriculum</td>
+                            <td class="p-4 text-center">
+                                <a href="/assets/pdf/Curriculum.pdf" target="_blank"
+                                    class="text-secondary font-semibold hover:underline">
+                                    Click HERE
+                                </a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </section>
 
@@ -591,7 +491,7 @@
 
     <!-- Back to Top Button -->
     <button id="backToTop" onclick="scrollToTop()"
-        class="fixed bottom-8 right-8 bg-secondary text-white w-12 h-12 rounded-full shadow-lg hidden hover:bg-primary transition z-50">
+        class="fixed bottom-8 right-8 bg-secondary text-white w-12 h-12 rounded-full shadow-lg hidden hover:bg-primary transition z-50 no-print">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -605,6 +505,13 @@
             offset: 100
         });
 
+        // Set current date
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-IN', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
+
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -613,68 +520,10 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Form Submission Handler
-        function handleSubmit(event) {
-            event.preventDefault();
-
-            const submitBtn = document.getElementById('submitBtn');
-            const successMessage = document.getElementById('successMessage');
-            const form = document.getElementById('contactForm');
-
-            // Disable button and show loading
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Sending...</span>';
-
-            // Get form data
-            const formData = {
-                firstName: document.getElementById('firstName').value,
-                lastName: document.getElementById('lastName').value,
-                email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
-            };
-
-            // Simulate form submission (replace with actual API call)
-            setTimeout(() => {
-                // Show success message
-                successMessage.classList.remove('hidden');
-
-                // Reset form
-                form.reset();
-
-                // Re-enable button
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i><span>Send Message</span>';
-
-                // Hide success message after 5 seconds
-                setTimeout(() => {
-                    successMessage.classList.add('hidden');
-                }, 5000);
-
-                // Scroll to success message
-                successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-                console.log('Form submitted:', formData);
-            }, 1500);
+        // Download PDF Function (Print to PDF)
+        function downloadPDF() {
+            window.print();
         }
-
-        // Form Validation
-        const formInputs = document.querySelectorAll('.form-input');
-        formInputs.forEach(input => {
-            input.addEventListener('blur', function () {
-                if (this.value.trim() === '') {
-                    this.classList.add('border-red-500');
-                    this.classList.remove('border-gray-200', 'border-secondary');
-                } else {
-                    this.classList.remove('border-red-500');
-                    this.classList.add('border-gray-200');
-                }
-            });
-
-            input.addEventListener('focus', function () {
-                this.classList.remove('border-red-500');
-            });
-        });
 
         // Back to Top Button
         const backToTopBtn = document.getElementById('backToTop');
@@ -709,61 +558,20 @@
             });
         });
 
-        // Add animation on scroll for contact cards
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade-in');
-                }
+        // Add hover effect to table rows
+        document.querySelectorAll('.table-row').forEach(row => {
+            row.addEventListener('mouseenter', function () {
+                this.style.transform = 'translateX(10px)';
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.contact-card').forEach(card => {
-            observer.observe(card);
+            row.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateX(0)';
+            });
         });
     </script>
     <script>
         function toggleDropdown(id) {
             const el = document.getElementById(id);
             el.classList.toggle("hidden");
-        }
-
-        function handleSubmit(event) {
-            event.preventDefault();
-
-            // Get form data
-            const firstName = document.getElementById('firstName').value;
-            const lastName = document.getElementById('lastName').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-
-            // Your WhatsApp number (with country code, no + or spaces)
-            const phoneNumber = "917778888578"; // replace with your number
-
-            // Create message
-            const whatsappMessage = `Hello, I have a new enquiry:
-
-Name: ${firstName} ${lastName}
-Email: ${email}
-Subject: ${subject}
-
-Message:
-${message}`;
-
-            // Encode message
-            const encodedMessage = encodeURIComponent(whatsappMessage);
-
-            // WhatsApp URL
-            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
-            // Redirect to WhatsApp
-            window.open(whatsappURL, "_blank");
         }
     </script>
 </body>

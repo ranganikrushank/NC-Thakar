@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facilities - N.C. Thakar Education Campus School</title>
+    <title>About Us - N.C. Thakar Education Campus School</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -15,9 +15,6 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -58,66 +55,30 @@
             width: 100%;
         }
 
-        .facility-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .facility-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .facility-icon {
+        .team-card {
             transition: all 0.3s ease;
         }
 
-        .facility-card:hover .facility-icon {
-            transform: scale(1.1) rotate(5deg);
+        .team-card:hover {
+            transform: translateY(-10px);
         }
 
-        .gallery-item {
-            overflow: hidden;
-            cursor: pointer;
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
         }
 
-        .gallery-item img {
-            transition: transform 0.5s ease;
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-        }
-
-        .modal.active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal-content {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-        }
-
-        .progress-bar {
-            width: 0%;
-            transition: width 1s ease;
-        }
-
-        .counter {
-            font-variant-numeric: tabular-nums;
+        .gradient-text {
+            background: linear-gradient(135deg, #1e3a5f 0%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
     </style>
 </head>
@@ -317,171 +278,107 @@
             </div>
         </div>
         <div class="container mx-auto px-4 text-center relative z-10">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4" data-aos="fade-down">Our Facilities</h1>
-            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                World-class infrastructure and amenities designed to provide the best learning environment for our
-                students
-            </p>
-            <div class="flex justify-center items-center space-x-2 text-secondary" data-aos="fade-up"
-                data-aos-delay="300">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 scroll-reveal">About Us</h1>
+            <div class="flex justify-center items-center space-x-2 text-secondary scroll-reveal">
                 <a href="/index.html" class="hover:text-white transition">Home</a>
                 <i class="fas fa-chevron-right text-sm"></i>
-                <span class="text-white">Facilities</span>
+                <span class="text-white">About Us</span>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="py-12 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-4xl font-bold text-secondary counter" data-target="50">0</div>
-                    <div class="text-gray-600 mt-2">Classrooms</div>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-4xl font-bold text-secondary counter" data-target="15">0</div>
-                    <div class="text-gray-600 mt-2">Laboratories</div>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-4xl font-bold text-secondary counter" data-target="200">0</div>
-                    <div class="text-gray-600 mt-2">CCTV Cameras</div>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-4xl font-bold text-secondary counter" data-target="5">0</div>
-                    <div class="text-gray-600 mt-2">Sports Grounds</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="py-16 bg-white" id="academic-life">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl font-bold text-primary mb-6 text-center">Academic Life</h2>
 
-    <!-- Main Facilities Grid -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-
-            <!-- Heading -->
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-primary mb-4">Club System</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    Encouraging creativity, communication, and personality development through specialized clubs
+            <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                <p class="text-gray-600 leading-relaxed">
+                    We are fully committed to the holistic development of children. We provide ample opportunities
+                    for students to learn, explore, discover, and grow. Well-equipped laboratories in Physics,
+                    Chemistry, Biology, Computer, and Language are maintained under the guidance of qualified staff
+                    and lab assistants.
+                </p>
+                <p class="text-gray-600 mt-4 leading-relaxed">
+                    These facilities allow students to perform experiments individually under supervision,
+                    strengthening their practical knowledge. Keeping future needs in mind, the school has developed
+                    spacious and advanced laboratories for all major subjects.
                 </p>
             </div>
+        </div>
+    </section>
 
-            <!-- Clubs -->
-            <div class="flex flex-wrap justify-center gap-10">
 
-                <a href="/clubsystem/music-club.html" class="group text-center">
-                    <div
-                        class="w-32 h-32 rounded-full overflow-hidden shadow-lg mx-auto transform group-hover:scale-110 transition">
-                        <img src="/assets/clubsystem/music-club/1.jpg" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="mt-4 font-semibold text-primary group-hover:text-secondary">
-                        Music Club
-                    </h4>
-                </a>
+    <section class="py-16 bg-gray-50" id="sports">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl font-bold text-primary mb-6 text-center">Sports & Games Life</h2>
 
-                <a href="/clubsystem/personality-club.html" class="group text-center">
-                    <div
-                        class="w-32 h-32 rounded-full overflow-hidden shadow-lg mx-auto transform group-hover:scale-110 transition">
-                        <img src="/assets/holistic/skills/12.jpg" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="mt-4 font-semibold text-primary group-hover:text-secondary">
-                        Personality Club
-                    </h4>
-                </a>
-
-                <a href="/clubsystem/public-speaking-club.html" class="group text-center">
-                    <div
-                        class="w-32 h-32 rounded-full overflow-hidden shadow-lg mx-auto transform group-hover:scale-110 transition">
-                        <img src="/assets/clubsystem/public-speaking-club/1.JPG" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="mt-4 font-semibold text-primary group-hover:text-secondary">
-                        Public Speaking Club
-                    </h4>
-                </a>
-
+            <div class="bg-white p-8 rounded-xl shadow-md">
+                <p class="text-gray-600 leading-relaxed">
+                    We offer a wide range of sports and games to cater to different talents within the student
+                    community. Through structured training and competitions, students develop physical fitness,
+                    discipline, teamwork, and leadership skills.
+                </p>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
+    <section class="py-16 bg-white" id="club-zone">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl font-bold text-primary mb-6 text-center">Club Zone</h2>
 
-            <!-- Grid -->
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                <p class="text-gray-600 leading-relaxed">
+                    The integration of work and study is a key element of our education system. Students gain
+                    practical experience alongside academics through structured club activities.
+                </p>
+                <p class="text-gray-600 mt-4 leading-relaxed">
+                    Clubs provide opportunities for students to adapt to group environments, develop lifelong
+                    habits, and cultivate a spirit of participation. These activities enhance practical knowledge
+                    and help students showcase their talents.
+                </p>
+            </div>
+        </div>
+    </section>
 
-                <!-- Sports -->
-                <div class="bg-white p-8 rounded-xl shadow-md">
-                    <h3 class="text-2xl font-bold text-primary mb-4">Sports Facility</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        The school organizes sports competitions at Inter-Class, Inter-House and Inter-School levels
-                        for various age groups of boys and girls throughout the year. The school also participates in
-                        competitions organized at Cluster, Zonal and National levels and Khel Mahakhumb.
-                    </p>
-                </div>
+    <section class="py-16 bg-gray-50" id="parents-involvement">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl font-bold text-primary mb-6 text-center">Parents Involvement</h2>
 
-                <!-- Activities -->
-                <div class="bg-white p-8 rounded-xl shadow-md">
-                    <h3 class="text-2xl font-bold text-primary mb-4">Activities Facilities</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        The school has a strong team of faculty along with modern equipment, resources and spaces to
-                        provide students opportunities to explore and nurture their talents in various activities.
-                    </p>
-                </div>
-
-                <!-- Library -->
-                <div class="bg-white p-8 rounded-xl shadow-md">
-                    <h3 class="text-2xl font-bold text-primary mb-4">Library Facility</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Our fully air-conditioned library is equipped with literary masterpieces, encyclopedias,
-                        reference books, journals and newspapers. It encourages lifelong learning and builds a strong
-                        reading culture among students.
-                    </p>
-                </div>
-
-                <!-- Laboratories -->
-                <div class="bg-white p-8 rounded-xl shadow-md">
-                    <h3 class="text-2xl font-bold text-primary mb-4">Laboratories</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Learning is enhanced through practical exposure in well-equipped laboratories for Physics,
-                        Chemistry, Biology, Maths, Social Science, Computers and Languages. Students develop analytical
-                        thinking and scientific understanding through hands-on experience.
-                    </p>
-                </div>
-
-                <!-- Digital Classroom -->
-                <div class="bg-white p-8 rounded-xl shadow-md md:col-span-2">
-                    <h3 class="text-2xl font-bold text-primary mb-4">Digital Classroom</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        The school adopts modern technology to enhance learning. Students actively engage with classroom
-                        technology, making learning interactive and aligned with the evolving digital world.
-                    </p>
-                </div>
-
+            <div class="bg-white p-8 rounded-xl shadow-md">
+                <p class="text-gray-600 leading-relaxed">
+                    Together we dream, believe, and achieve. Parents and guardians play a crucial role in a
+                    child’s educational journey. While teachers guide in school, families provide the foundation
+                    for academic success.
+                </p>
+                <p class="text-gray-600 mt-4 leading-relaxed">
+                    We strongly believe in building partnerships with parents. Research shows that active
+                    parental involvement significantly enhances student performance and overall development.
+                    Our school works continuously to strengthen this collaboration.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-primary text-white">
+    <!-- <section class="py-20 bg-secondary">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-5xl font-bold mb-6" data-aos="fade-up">Experience Our World-Class Facilities
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 scroll-reveal">Ready to Join Our School Family?
             </h2>
-            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                Schedule a campus tour and see our facilities in person
+            <p class="text-white text-lg mb-8 max-w-2xl mx-auto scroll-reveal">
+                Admissions are now open for the academic year. Contact us to schedule a campus tour.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="200">
-                <a href="#contact"
-                    class="bg-secondary text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-primary transition shadow-lg inline-flex items-center justify-center">
-                    <i class="fas fa-calendar-alt mr-2"></i> Book a Tour
+            <div class="flex flex-col sm:flex-row gap-4 justify-center scroll-reveal">
+                <a href="#"
+                    class="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-primary transition shadow-lg">
+                    <i class="fas fa-download mr-2"></i> Download Prospectus
                 </a>
-                <a href="tel:+91903321 10234"
-                    class="bg-white text-primary px-8 py-4 rounded-full font-semibold hover:bg-secondary hover:text-white transition shadow-lg inline-flex items-center justify-center">
-                    <i class="fas fa-phone mr-2"></i> Call Us Now
+                <a href="#contact"
+                    class="bg-white text-primary px-8 py-4 rounded-full font-semibold hover:bg-primary hover:text-white transition shadow-lg">
+                    <i class="fas fa-phone mr-2"></i> Contact Admissions
                 </a>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <footer class="bg-primary text-white pt-16 pb-8">
@@ -586,30 +483,13 @@
         </div>
     </footer>
 
-    <!-- Image Modal -->
-    <div id="imageModal" class="modal" onclick="closeModal()">
-        <img class="modal-content" id="modalImg">
-        <span
-            class="absolute top-4 right-8 text-white text-5xl font-bold cursor-pointer hover:text-secondary transition"
-            onclick="closeModal()">&times;</span>
-    </div>
-
     <!-- Back to Top Button -->
     <button id="backToTop" onclick="scrollToTop()"
         class="fixed bottom-8 right-8 bg-secondary text-white w-12 h-12 rounded-full shadow-lg hidden hover:bg-primary transition z-50">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize AOS Animation Library
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100
-        });
-
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -618,65 +498,21 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Counter Animation
-        const counters = document.querySelectorAll('.counter');
-        const speed = 200;
-
-        const animateCounters = () => {
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                const inc = target / speed;
-
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + inc);
-                    setTimeout(animateCounters, 20);
-                } else {
-                    counter.innerText = target + '+';
-                }
-            });
-        };
-
-        // Trigger counters when in viewport
+        // Scroll Reveal Animation
         const observerOptions = {
-            threshold: 0.5
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    animateCounters();
-                    observer.unobserve(entry.target);
+                    entry.target.classList.add('active');
                 }
             });
         }, observerOptions);
 
-        const statsSection = document.querySelector('.counter').parentElement.parentElement;
-        if (statsSection) {
-            observer.observe(statsSection);
-        }
-
-        // Image Modal Functions
-        function openModal(src) {
-            const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImg');
-            modal.classList.add('active');
-            modalImg.src = src;
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('imageModal');
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close modal on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
-        });
+        document.querySelectorAll('.scroll-reveal').forEach((el) => observer.observe(el));
 
         // Back to Top Button
         const backToTopBtn = document.getElementById('backToTop');
@@ -706,25 +542,16 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+                    // Close mobile menu if open
                     mobileMenu.classList.add('hidden');
                 }
             });
         });
 
-        // Lazy Loading Images
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.classList.remove('lazy');
-                        observer.unobserve(img);
-                    }
-                });
-            });
-
-            document.querySelectorAll('img').forEach(img => imageObserver.observe(img));
-        }
+        // Add animation delay to grid items
+        document.querySelectorAll('.grid .scroll-reveal').forEach((el, index) => {
+            el.style.transitionDelay = `${index * 100}ms`;
+        });
     </script>
     <script>
         function toggleDropdown(id) {

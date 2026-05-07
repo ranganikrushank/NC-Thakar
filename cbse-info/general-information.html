@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers - NC Thakar</title>
-    
+    <title>General Information - NC Thakar</title>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -34,13 +36,13 @@
             }
         }
     </script>
-    
+
     <style>
         .nav-link {
             position: relative;
             transition: color 0.3s ease;
         }
-        
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -51,38 +53,40 @@
             background: #f59e0b;
             transition: width 0.3s ease;
         }
-        
+
         .nav-link:hover::after {
             width: 100%;
         }
-        
-        .form-input {
+
+        .table-row {
             transition: all 0.3s ease;
         }
-        
-        .form-input:focus {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+
+        .table-row:hover {
+            background-color: rgba(245, 158, 11, 0.1);
+            transform: translateX(5px);
         }
-        
+
         .hero-pattern {
             background-image: url("image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
-        
-        .upload-area {
-            border: 2px dashed #cbd5e1;
-            transition: all 0.3s ease;
-        }
-        
-        .upload-area:hover, .upload-area.dragover {
-            border-color: #f59e0b;
-            background-color: rgba(245, 158, 11, 0.05);
+
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+
+            .table-container {
+                box-shadow: none !important;
+                border: 1px solid #ddd !important;
+            }
         }
     </style>
 </head>
+
 <body class="font-sans antialiased bg-gray-50">
 
-    <!-- Top Navigation -->
+    <!-- Top Navigation (Desktop Only) -->
     <nav class="hidden lg:block bg-primary text-white py-2 text-sm">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center">
@@ -271,251 +275,309 @@
     <section class="bg-primary py-20 relative overflow-hidden">
         <div class="absolute inset-0 hero-pattern opacity-20"></div>
         <div class="container mx-auto px-4 text-center relative z-10">
-            <div class="inline-flex items-center justify-center w-16 h-16 bg-secondary rounded-full mb-4" data-aos="zoom-in">
-                <i class="fas fa-briefcase text-3xl text-primary"></i>
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-secondary rounded-full mb-4"
+                data-aos="zoom-in">
+                <i class="fas fa-info-circle text-3xl text-primary"></i>
             </div>
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4" data-aos="fade-down">Join Our Team</h1>
-            <div class="flex justify-center items-center space-x-2 text-secondary" data-aos="fade-up" data-aos-delay="200">
-                <a href="index.html" class="hover:text-white transition">Home</a>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4" data-aos="fade-down">General Information</h1>
+            <div class="flex justify-center items-center space-x-2 text-secondary" data-aos="fade-up"
+                data-aos-delay="200">
+                <a href="/index.html" class="hover:text-white transition">Home</a>
                 <i class="fas fa-chevron-right text-sm"></i>
-                <span class="text-white">Career</span>
+                <span class="text-white">General Information</span>
             </div>
         </div>
     </section>
 
-    <!-- Career Application Form Section -->
+    <!-- Information Table Section -->
     <section class="py-16 bg-gradient-to-b from-cream to-white">
         <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12" data-aos="fade-up">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-4">
-                        <i class="fas fa-file-alt text-3xl text-secondary"></i>
+            <div class="max-w-5xl mx-auto">
+                <!-- Table Container -->
+                <div class="table-container bg-white rounded-2xl shadow-2xl overflow-hidden" data-aos="fade-up">
+                    <!-- Table Header -->
+                    <div class="bg-gradient-to-r from-primary to-blue-800 text-white p-6">
+                        <div class="flex items-center justify-between flex-wrap gap-4">
+                            <div>
+                                <h2 class="text-2xl md:text-3xl font-bold mb-2">
+                                    <i class="fas fa-school mr-3 text-secondary"></i>
+                                    NC Thakar
+                                </h2>
+                                <p class="text-gray-300 text-sm md:text-base">Official School Information & Registration
+                                    Details</p>
+                            </div>
+                            <!-- <button onclick="window.print()"
+                                class="bg-secondary text-white px-6 py-3 rounded-lg hover:bg-white hover:text-primary transition font-semibold shadow-lg flex items-center gap-2">
+                                <i class="fas fa-print"></i>
+                                <span class="hidden sm:inline">Print Details</span>
+                            </button> -->
+                        </div>
                     </div>
-                    <h2 class="text-4xl font-bold text-primary mb-4">Application Form</h2>
-                    <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
-                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
-                        Ready to shape young minds? Submit your details and resume below. Our HR team will review your application and get back to you shortly.
-                    </p>
+
+                    <!-- Responsive Table -->
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="bg-gradient-to-r from-secondary to-amber-600 text-white">
+                                    <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider w-20">Sr.
+                                        No</th>
+                                    <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">
+                                        Information</th>
+                                    <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">Details
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr class="table-row bg-gray-50 hover:bg-amber-50" data-aos="fade-right"
+                                    data-aos-delay="100">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span
+                                            class="inline-flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full font-bold text-sm">1</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap font-semibold text-primary">
+                                        <i class="fas fa-school text-secondary mr-2"></i>
+                                        Name of School
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-gray-700 font-medium">
+                                        NC Thakar
+                                    </td>
+                                </tr>
+
+                                <tr class="table-row hover:bg-amber-50" data-aos="fade-right" data-aos-delay="150">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span
+                                            class="inline-flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full font-bold text-sm">2</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap font-semibold text-primary">
+                                        <i class="fas fa-file-alt text-secondary mr-2"></i>
+                                        SSC Index No
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-gray-700 font-medium font-mono">
+                                        68.0821
+                                    </td>
+                                </tr>
+
+                                <tr class="table-row bg-gray-50 hover:bg-amber-50" data-aos="fade-right"
+                                    data-aos-delay="200">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span
+                                            class="inline-flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full font-bold text-sm">3</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap font-semibold text-primary">
+                                        <i class="fas fa-graduation-cap text-secondary mr-2"></i>
+                                        HSC Index No
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-gray-700 font-medium font-mono">
+                                        18.0516
+                                    </td>
+                                </tr>
+
+                                <tr class="table-row hover:bg-amber-50" data-aos="fade-right" data-aos-delay="250">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span
+                                            class="inline-flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full font-bold text-sm">4</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap font-semibold text-primary">
+                                        <i class="fas fa-id-card text-secondary mr-2"></i>
+                                        UDISE Code
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-gray-700 font-medium font-mono">
+                                        24221528101
+                                    </td>
+                                </tr>
+
+                                <tr class="table-row bg-gray-50 hover:bg-amber-50" data-aos="fade-right"
+                                    data-aos-delay="300">
+                                    <td class="px-6 py-4 whitespace-nowrap align-top">
+                                        <span
+                                            class="inline-flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full font-bold text-sm">5</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap font-semibold text-primary align-top">
+                                        <i class="fas fa-map-marker-alt text-secondary mr-2"></i>
+                                        Complete Address with Pin Code
+                                    </td>
+                                    <td class="px-6 py-4 text-gray-700 font-medium">
+                                        <div class="flex items-start">
+                                            <i class="fas fa-location-arrow text-secondary mt-1 mr-2"></i>
+                                            <span>NC Thakar Education Campus, near CH Park, Sarthana Jakat Naka, Sagwadi, Nana Varachha, Kathodara, Surat, Gujarat 395013</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="table-row hover:bg-amber-50" data-aos="fade-right" data-aos-delay="350">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span
+                                            class="inline-flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full font-bold text-sm">6</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap font-semibold text-primary">
+                                        <i class="fas fa-user-tie text-secondary mr-2"></i>
+                                        CEO
+                                    </td>
+                                    <td class="px-6 py-4 text-gray-700 font-medium">
+                                        <div>
+                                            <span class="font-semibold text-primary">Mr. Dipak Bhadiyadara</span>
+                                            <span class="text-secondary text-sm ml-2">(M.Com., B.Ed.)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="table-row bg-gray-50 hover:bg-amber-50" data-aos="fade-right"
+                                    data-aos-delay="400">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span
+                                            class="inline-flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full font-bold text-sm">7</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap font-semibold text-primary">
+                                        <i class="fas fa-chalkboard-teacher text-secondary mr-2"></i>
+                                        Principal - Sec & Higher Sec.
+                                    </td>
+                                    <td class="px-6 py-4 text-gray-700 font-medium">
+                                        <div>
+                                            <span class="font-semibold text-primary">Mr. Girish Khoyani</span>
+                                            <span class="text-secondary text-sm ml-2">(M.Sc., B.Ed.)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="table-row hover:bg-amber-50" data-aos="fade-right" data-aos-delay="450">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span
+                                            class="inline-flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full font-bold text-sm">8</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap font-semibold text-primary">
+                                        <i class="fas fa-chalkboard text-secondary mr-2"></i>
+                                        Principal - Primary
+                                    </td>
+                                    <td class="px-6 py-4 text-gray-700 font-medium">
+                                        <div>
+                                            <span class="font-semibold text-primary">Mrs. Megha Pachchigar</span>
+                                            <span class="text-secondary text-sm ml-2">(M.A., M.Ed.)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="table-row bg-gray-50 hover:bg-amber-50" data-aos="fade-right"
+                                    data-aos-delay="500">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span
+                                            class="inline-flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full font-bold text-sm">9</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap font-semibold text-primary">
+                                        <i class="fas fa-child text-secondary mr-2"></i>
+                                        Principal - Pri-Primary
+                                    </td>
+                                    <td class="px-6 py-4 text-gray-700 font-medium">
+                                        <div>
+                                            <span class="font-semibold text-primary">Mrs. Bhavna Lad</span>
+                                            <span class="text-secondary text-sm ml-2">(B.A., B.Ed.)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="table-row hover:bg-amber-50" data-aos="fade-right" data-aos-delay="550">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span
+                                            class="inline-flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full font-bold text-sm">10</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap font-semibold text-primary">
+                                        <i class="fas fa-envelope text-secondary mr-2"></i>
+                                        School Email ID
+                                    </td>
+                                    <td class="px-6 py-4 text-gray-700 font-medium">
+                                        <a href="mailto:10223@cbseshiksha.in"
+                                            class="text-primary hover:text-secondary transition flex items-center">
+                                            <i class="fas fa-envelope mr-2"></i>
+                                            10223@cbseshiksha.in
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr class="table-row bg-gray-50 hover:bg-amber-50" data-aos="fade-right"
+                                    data-aos-delay="600">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span
+                                            class="inline-flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full font-bold text-sm">11</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap font-semibold text-primary">
+                                        <i class="fas fa-phone-alt text-secondary mr-2"></i>
+                                        Contact Details (Landline/Mobile)
+                                    </td>
+                                    <td class="px-6 py-4 text-gray-700 font-medium">
+                                        <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+                                            <a href="tel:+91903321 10234"
+                                                class="text-primary hover:text-secondary transition flex items-center">
+                                                <i class="fas fa-phone mr-2"></i>
+                                                +91 903321 10234
+                                            </a>
+                                            <span class="hidden sm:inline text-gray-400">/</span>
+                                            <!-- <a href="tel:+919712942260"
+                                                class="text-primary hover:text-secondary transition flex items-center">
+                                                <i class="fas fa-mobile-alt mr-2"></i>
+                                                +91 9712942260
+                                            </a> -->
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Table Footer -->
+                    <!-- <div class="bg-gradient-to-r from-primary to-blue-800 text-white p-6">
+                        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                            <div class="text-center md:text-left">
+                                <p class="text-sm text-gray-300">Last Updated: <span id="currentDate"></span></p>
+                            </div>
+                            <div class="flex gap-3">
+                                <button onclick="window.print()"
+                                    class="bg-secondary text-white px-6 py-2 rounded-lg hover:bg-white hover:text-primary transition font-semibold shadow-lg flex items-center gap-2">
+                                    <i class="fas fa-print"></i>
+                                    Print
+                                </button>
+                                <button onclick="downloadPDF()"
+                                    class="bg-white text-primary px-6 py-2 rounded-lg hover:bg-secondary hover:text-white transition font-semibold shadow-lg flex items-center gap-2">
+                                    <i class="fas fa-download"></i>
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-2xl p-8 md:p-12 border border-gray-100" data-aos="fade-up">
-                    <form id="careerForm" class="space-y-8" onsubmit="handleSubmit(event)">
-                        
-                        <!-- Personal Information -->
-                        <div class="bg-gradient-to-r from-primary to-blue-800 text-white p-6 rounded-xl">
-                            <h3 class="text-xl font-bold flex items-center">
-                                <i class="fas fa-user mr-3 text-secondary"></i>
-                                Personal Information
-                            </h3>
+                <!-- Quick Info Cards -->
+                <div class="grid md:grid-cols-3 gap-6 mt-8">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <div class="flex items-center mb-3">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-secondary text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-primary text-lg">Location</h3>
                         </div>
+                        <p class="text-gray-600 text-sm">NC Thakar Education Campus, <br> near CH Park, Sarthana Jakat Naka, <br> Sagwadi, Nana Varachha, Kathodara, Surat, Gujarat 395013</p>
+                    </div>
 
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="firstName" class="block text-sm font-semibold text-gray-700 mb-2">
-                                    <i class="fas fa-user text-secondary mr-2"></i>First Name *
-                                </label>
-                                <input 
-                                    type="text" 
-                                    id="firstName" 
-                                    name="firstName" 
-                                    required
-                                    class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
-                                    placeholder="Enter your first name"
-                                >
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-secondary" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div class="flex items-center mb-3">
+                            <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-primary text-xl"></i>
                             </div>
-                            
-                            <div>
-                                <label for="lastName" class="block text-sm font-semibold text-gray-700 mb-2">
-                                    <i class="fas fa-user text-secondary mr-2"></i>Last Name *
-                                </label>
-                                <input 
-                                    type="text" 
-                                    id="lastName" 
-                                    name="lastName" 
-                                    required
-                                    class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
-                                    placeholder="Enter your last name"
-                                >
-                            </div>
+                            <h3 class="font-bold text-primary text-lg">Contact</h3>
                         </div>
+                        <p class="text-gray-600 text-sm">+91 903321 10234</p>
+                    </div>
 
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
-                                    <i class="fas fa-envelope text-secondary mr-2"></i>Email ID *
-                                </label>
-                                <input 
-                                    type="email" 
-                                    id="email" 
-                                    name="email" 
-                                    required
-                                    class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
-                                    placeholder="your.email@example.com"
-                                >
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <div class="flex items-center mb-3">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-secondary text-xl"></i>
                             </div>
-                            
-                            <div>
-                                <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
-                                    <i class="fas fa-phone text-secondary mr-2"></i>Phone Number *
-                                </label>
-                                <input 
-                                    type="tel" 
-                                    id="phone" 
-                                    name="phone" 
-                                    required
-                                    pattern="[0-9]{10}"
-                                    class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
-                                    placeholder="Enter 10-digit phone number"
-                                >
-                            </div>
+                            <h3 class="font-bold text-primary text-lg">Email</h3>
                         </div>
-
-                        <!-- Role Selection -->
-                        <div>
-                            <label for="applyingRole" class="block text-sm font-semibold text-gray-700 mb-2">
-                                <i class="fas fa-chalkboard-teacher text-secondary mr-2"></i>Applying Role *
-                            </label>
-                            <select 
-                                id="applyingRole" 
-                                name="applyingRole" 
-                                required
-                                class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
-                            >
-                                <option value="">Select Position</option>
-                                <option value="pre-primary">Pre-Primary Teacher</option>
-                                <option value="primary">Primary Teacher</option>
-                                <option value="senior-secondary">Senior Secondary Teacher</option>
-                                <option value="sports-teacher">Sports Teacher</option>
-                                <option value="activity-incharge">Activity In-Charge</option>
-                            </select>
-                        </div>
-
-                        <!-- Address Information -->
-                        <div class="bg-gradient-to-r from-secondary to-amber-600 text-white p-6 rounded-xl">
-                            <h3 class="text-xl font-bold flex items-center">
-                                <i class="fas fa-map-marker-alt mr-3 text-white"></i>
-                                Address Details
-                            </h3>
-                        </div>
-
-                        <div>
-                            <label for="address" class="block text-sm font-semibold text-gray-700 mb-2">
-                                <i class="fas fa-home text-secondary mr-2"></i>Address *
-                            </label>
-                            <textarea 
-                                id="address" 
-                                name="address" 
-                                rows="3" 
-                                required
-                                class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50 resize-none"
-                                placeholder="Enter your full street address"
-                            ></textarea>
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                            <div>
-                                <label for="city" class="block text-sm font-semibold text-gray-700 mb-2">
-                                    <i class="fas fa-city text-secondary mr-2"></i>City *
-                                </label>
-                                <input 
-                                    type="text" 
-                                    id="city" 
-                                    name="city" 
-                                    required
-                                    class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
-                                    placeholder="City"
-                                >
-                            </div>
-                            
-                            <div>
-                                <label for="state" class="block text-sm font-semibold text-gray-700 mb-2">
-                                    <i class="fas fa-map text-secondary mr-2"></i>State *
-                                </label>
-                                <input 
-                                    type="text" 
-                                    id="state" 
-                                    name="state" 
-                                    required
-                                    class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
-                                    placeholder="State"
-                                >
-                            </div>
-                            
-                            <div>
-                                <label for="zip" class="block text-sm font-semibold text-gray-700 mb-2">
-                                    <i class="fas fa-mail-bulk text-secondary mr-2"></i>Zip/Postal *
-                                </label>
-                                <input 
-                                    type="text" 
-                                    id="zip" 
-                                    name="zip" 
-                                    required
-                                    pattern="[0-9]{6}"
-                                    class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
-                                    placeholder="Postal Code"
-                                >
-                            </div>
-                            
-                            <div>
-                                <label for="country" class="block text-sm font-semibold text-gray-700 mb-2">
-                                    <i class="fas fa-globe text-secondary mr-2"></i>Country *
-                                </label>
-                                <input 
-                                    type="text" 
-                                    id="country" 
-                                    name="country" 
-                                    required
-                                    value="India"
-                                    class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-secondary focus:outline-none bg-gray-50"
-                                    placeholder="Country"
-                                >
-                            </div>
-                        </div>
-
-                        <!-- Resume Upload -->
-                        <!-- <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">
-                                <i class="fas fa-paperclip text-secondary mr-2"></i>Upload Resume/CV (PDF, DOC, DOCX) *
-                            </label>
-                            <div class="upload-area rounded-lg p-6 text-center cursor-pointer" id="dropZone">
-                                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required class="hidden">
-                                <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-2"></i>
-                                <p class="text-gray-600">Drag & drop your resume here or <span class="text-secondary font-semibold">browse</span></p>
-                                <p class="text-xs text-gray-500 mt-1">Max file size: 5MB</p>
-                                <p id="fileName" class="text-sm font-semibold text-primary mt-2 hidden"></p>
-                            </div>
-                        </div> -->
-
-                        <!-- Submit Button -->
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <button 
-                                type="submit" 
-                                id="submitBtn"
-                                class="flex-1 bg-gradient-to-r from-primary to-blue-800 text-white font-bold py-4 px-8 rounded-lg hover:from-secondary hover:to-amber-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2"
-                            >
-                                <i class="fas fa-paper-plane"></i>
-                                <span>Submit Application</span>
-                            </button>
-                            <button 
-                                type="reset" 
-                                class="flex-1 bg-gray-200 text-gray-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-300 transition-all duration-300 flex items-center justify-center gap-2"
-                            >
-                                <i class="fas fa-redo"></i>
-                                <span>Reset Form</span>
-                            </button>
-                        </div>
-
-                        <!-- Success Message (Hidden by default) -->
-                        <div id="successMessage" class="hidden mt-6 p-4 bg-green-100 border-l-4 border-green-500 text-green-700 rounded-lg">
-                            <div class="flex items-center">
-                                <i class="fas fa-check-circle mr-3 text-2xl"></i>
-                                <div>
-                                    <p class="font-bold">Application Submitted Successfully!</p>
-                                    <p class="text-sm">Our HR team will review your profile and contact you shortly.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                        <p class="text-gray-600 text-sm">10223@cbseshiksha.in</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -621,7 +683,8 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="backToTop" onclick="scrollToTop()" class="fixed bottom-8 right-8 bg-secondary text-white w-12 h-12 rounded-full shadow-lg hidden hover:bg-primary transition z-50">
+    <button id="backToTop" onclick="scrollToTop()"
+        class="fixed bottom-8 right-8 bg-secondary text-white w-12 h-12 rounded-full shadow-lg hidden hover:bg-primary transition z-50 no-print">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -634,127 +697,45 @@
             once: true,
             offset: 100
         });
-        
+
+        // Set current date
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-IN', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
+
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
+
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-        
-        // File Upload Handling
-        const dropZone = document.getElementById('dropZone');
-        const fileInput = document.getElementById('resume');
-        const fileNameDisplay = document.getElementById('fileName');
-        
-        dropZone.addEventListener('click', () => fileInput.click());
-        
-        dropZone.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            dropZone.classList.add('dragover');
-        });
-        
-        dropZone.addEventListener('dragleave', () => {
-            dropZone.classList.remove('dragover');
-        });
-        
-        dropZone.addEventListener('drop', (e) => {
-            e.preventDefault();
-            dropZone.classList.remove('dragover');
-            if (e.dataTransfer.files.length) {
-                fileInput.files = e.dataTransfer.files;
-                updateFileName(e.dataTransfer.files[0].name);
-            }
-        });
-        
-        fileInput.addEventListener('change', () => {
-            if (fileInput.files.length) {
-                updateFileName(fileInput.files[0].name);
-            }
-        });
-        
-        function updateFileName(name) {
-            fileNameDisplay.textContent = `📄 ${name}`;
-            fileNameDisplay.classList.remove('hidden');
+
+        // Download PDF Function (Print to PDF)
+        function downloadPDF() {
+            window.print();
         }
-        
-        // Form Submission Handler
-        function handleSubmit(event) {
-            event.preventDefault();
-            
-            const submitBtn = document.getElementById('submitBtn');
-            const successMessage = document.getElementById('successMessage');
-            const form = document.getElementById('careerForm');
-            
-            // Disable button and show loading
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Submitting...</span>';
-            
-            // Get form data
-            const formData = new FormData(form);
-            
-            // Simulate form submission (replace with actual API call)
-            setTimeout(() => {
-                // Show success message
-                successMessage.classList.remove('hidden');
-                
-                // Reset form
-                form.reset();
-                fileNameDisplay.classList.add('hidden');
-                
-                // Re-enable button
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i><span>Submit Application</span>';
-                
-                // Hide success message after 8 seconds
-                setTimeout(() => {
-                    successMessage.classList.add('hidden');
-                }, 8000);
-                
-                // Scroll to success message
-                successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                
-                console.log('Career application submitted');
-            }, 1500);
-        }
-        
-        // Form Validation Visual Feedback
-        const formInputs = document.querySelectorAll('.form-input');
-        formInputs.forEach(input => {
-            input.addEventListener('blur', function() {
-                if (this.required && this.value.trim() === '') {
-                    this.classList.add('border-red-500');
-                    this.classList.remove('border-gray-200', 'border-secondary');
-                } else {
-                    this.classList.remove('border-red-500');
-                    this.classList.add('border-gray-200');
-                }
-            });
-            
-            input.addEventListener('focus', function() {
-                this.classList.remove('border-red-500');
-            });
-        });
-        
+
         // Back to Top Button
         const backToTopBtn = document.getElementById('backToTop');
-        
-        window.onscroll = function() {
+
+        window.onscroll = function () {
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
                 backToTopBtn.classList.remove('hidden');
             } else {
                 backToTopBtn.classList.add('hidden');
             }
         };
-        
+
         function scrollToTop() {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         }
-        
+
         // Smooth Scroll for Navigation Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -769,6 +750,16 @@
                 }
             });
         });
+
+        // Add hover effect to table rows
+        document.querySelectorAll('.table-row').forEach(row => {
+            row.addEventListener('mouseenter', function () {
+                this.style.transform = 'translateX(10px)';
+            });
+            row.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateX(0)';
+            });
+        });
     </script>
     <script>
         function toggleDropdown(id) {
@@ -777,4 +768,5 @@
         }
     </script>
 </body>
+
 </html>
